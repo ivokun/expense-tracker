@@ -1,8 +1,7 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
-import "./App.css";
-import { Button } from "./components/ui/button";
+import { Button } from "@/components/ui/button";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -15,7 +14,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Welcome to Tauri!</h1>
+      <h1 className="text-2xl">Welcome to Tauri!</h1>
 
       <div className="row">
         <a href="https://vitejs.dev" target="_blank">
@@ -44,7 +43,7 @@ function App() {
           placeholder="Enter a name..."
         />
         <button type="submit">Greet</button>
-        <Button type="button">Click another</Button>
+        <Button>Click another</Button>
       </form>
 
       <p>{greetMsg}</p>
